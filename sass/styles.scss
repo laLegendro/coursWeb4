@@ -1,0 +1,34 @@
+/*
+Theme Name: theme-laLegendro
+Theme URI: referenced.ca
+Author:     Alejandro yanez
+Author URI: https://wordpress.org/
+Description: thème de base développé dans le cours 424
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+
+
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: laLegendro
+ce theme a été développé dans le cadre du cours 4w4
+*/
+
+//https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+
+/* *******************************************************************/
+/* *********************** variables css mf  *************************/
+/* *******************************************************************/
+
+@import "variables";
+
+/* *******************************************************************/
+/* ******************* règles de normalization MF ********************/
+/* *******************************************************************/
+@import "normalize";
+
+/* *******************************************************************/
+/* ************************ règles de base  **************************/
+/* *******************************************************************/
+@import "base/h";
