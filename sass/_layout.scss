@@ -1,11 +1,3 @@
-:root {
-  --coouleur-arriere-entete: #ccc;
-  --coouleur-arriere-accueil: #ddd;
-  --coouleur-arriere-evenement: #dd1;
-  --coouleur-arriere-footer: #aaa;
-  --coouleur-arriere-galerie: #fa4;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -28,7 +20,7 @@ body {
 }
 
 #entete {
-  background-color: var(--couleur-arriere-entete);
+  background-color: red;
 }
 #accueil {
   background-color: var(--couleur-arriere-accueil);

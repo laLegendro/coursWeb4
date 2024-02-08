@@ -19,11 +19,11 @@ ce theme a été développé dans le cadre du cours 4w4
 /* *********************** variables css mf  *************************/
 /* *******************************************************************/
 :root {
-  --coouleur-arriere-entete: #ccc;
-  --coouleur-arriere-accueil: #ddd;
-  --coouleur-arriere-evenement: #dd1;
-  --coouleur-arriere-footer: #aaa;
-  --coouleur-arriere-galerie: #fa4;
+  --couleur-arriere-accueil: red;
+  --couleur-arriere-entete: red;
+  --couleur-arriere-evenement: #dd1;
+  --couleur-arriere-footer: #aaa;
+  --couleur-arriere-galerie: #fa4;
 }
 
 /* *******************************************************************/
@@ -51,14 +51,6 @@ h2 {
 /* *******************************************************************/
 /* ******************** règles de pagination  ************************/
 /* *******************************************************************/
-:root {
-  --coouleur-arriere-entete: #ccc;
-  --coouleur-arriere-accueil: #ddd;
-  --coouleur-arriere-evenement: #dd1;
-  --coouleur-arriere-footer: #aaa;
-  --coouleur-arriere-galerie: #fa4;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -80,7 +72,7 @@ body {
 }
 
 #entete {
-  background-color: var(--couleur-arriere-entete);
+  background-color: red;
 }
 
 #accueil {

@@ -13,6 +13,7 @@
 - compléter chacune des règles de style des éléments H
 - Changer les couleurs de background
 - Améliorer le design général sans être trop spécifique
-- Ajouter 2 variables
+- Ajouter 2 variables (transparence, largeur)
 - Créer plusieurs commit
 - Une Git-hub-page
+- mettre l'adresse du github page
