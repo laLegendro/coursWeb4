@@ -14,6 +14,6 @@
 - Changer les couleurs de background - CETTE TÂCHE EST MAINTENANT COMPLÉTÉ
 - Améliorer le design général sans être trop spécifique -- CETTE TÂCHE EST COMPLÉTÉ (BORDER COOL D'AJOUTÉ - AUSSI EFFETS SUPPLÉMENTAIRES SUR LE H1)
 - Ajouter 2 variables (transparence, largeur) -- TÂCHE COMPLÉTÉ: VARIABLE 1: EFFET TYPO H1, VARIABLE 2: LARGEUR FLEX BASIS
-- Créer plusieurs commit
-- Une Git-hub-page
-- mettre l'adresse du github page
+- Créer plusieurs commit -- TÂCHE COMPLETÉE: PLUS QUE 6 COMMITS ONT ÉTÉ FAITS
+- Une Git-hub-page -- TÂCHE COMPLETÉE
+- mettre l'adresse du github page: https://lalegendro.github.io/coursWeb4/

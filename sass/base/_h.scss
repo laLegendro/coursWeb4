@@ -10,10 +10,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 
 h1 {
   font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
-
-  //seulement sur le h1 je veux un effet
+  color: white;
 
   background: var(--effet-typo-h1); //je dois mettre un background dans la typo
+
   background-size: 200% 100%; // l'agrandir sinon l'effet ne se produit pas genre
   background-clip: text; // je clippe l'arrière plan à la typo
   -webkit-background-clip: text; // je dois spécifier que le tout sera dans la typo
@@ -35,11 +35,9 @@ h4 {
 }
 h5 {
   font-size: clamp(0.875rem, -1.1563rem + 6.5vw, 2.5rem);
-  color: rgba(#000, 0.6);
 }
 h6 {
   font-size: clamp(0.8125rem, -1.1406rem + 6.25vw, 2.375rem);
-  color: rgba(#000, 0.6);
 }
 
 p {
