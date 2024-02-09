@@ -29,10 +29,13 @@
     rgb(32, 40, 48) 91.3%
   );
 
-  --effet-typo-h1: linear-gradient(
+  --effet-typo-h1:// création variable 1
+    linear-gradient(
     to right,
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 1) 25%,
     rgba(255, 255, 255, 0.2) 50%
   );
+
+  --largeur-flex-basis: 900px; // création variable 2
 }

@@ -45,12 +45,14 @@ ce theme a été développé dans le cadre du cours 4w4
     rgb(72, 200, 160) 11.2%,
     rgb(32, 40, 48) 91.3%
   );
-  --effet-typo-h1: linear-gradient(
+  --effet-typo-h1:// création variable 1
+    linear-gradient(
     to right,
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 1) 25%,
     rgba(255, 255, 255, 0.2) 50%
   );
+  --largeur-flex-basis: 900px;
 }
 
 /* *******************************************************************/
@@ -118,7 +120,7 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 900px; /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
+  flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
   background-color: rgba(0, 0, 0, 0.1);
   padding: 5rem 1rem;
 }
