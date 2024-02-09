@@ -45,6 +45,12 @@ ce theme a été développé dans le cadre du cours 4w4
     rgb(72, 200, 160) 11.2%,
     rgb(32, 40, 48) 91.3%
   );
+  --effet-typo-h1: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 0.2) 50%
+  );
 }
 
 /* *******************************************************************/
@@ -61,11 +67,36 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 */
 h1 {
   font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
-  color: rgba(0, 0, 0, 0.5);
+  background: var(--effet-typo-h1);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+h3 {
+  font-size: clamp(1rem, -1.1875rem + 7vw, 2.75rem);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+  font-size: clamp(0.9375rem, -1.1719rem + 6.75vw, 2.625rem);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+h5 {
+  font-size: clamp(0.875rem, -1.1563rem + 6.5vw, 2.5rem);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+h6 {
+  font-size: clamp(0.8125rem, -1.1406rem + 6.25vw, 2.375rem);
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -94,20 +125,49 @@ body {
 
 #entete {
   background: var(--couleur-arriere-entete);
+  position: relative;
+}
+
+@keyframes borderFadeInOut {
+  0%, 100% {
+    background-position: -100% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+#entete::after,
+#accueil::after,
+#galerie::after,
+#evenement::after,
+#footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Couvre toute la largeur de la div */
+  height: 7px;
+  background: var(--effet-typo-h1);
+  background-size: 200% 100%;
+  animation: borderFadeInOut 4s infinite;
 }
 
 #accueil {
   background: var(--couleur-arriere-accueil);
+  position: relative;
 }
 
 #galerie {
   background: var(--couleur-arriere-galerie);
+  position: relative;
 }
 
 #evenement {
   background: var(--couleur-arriere-evenement);
+  position: relative;
 }
 
 #footer {
   background: var(--couleur-arriere-footer);
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

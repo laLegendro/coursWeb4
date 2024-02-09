@@ -21,16 +21,48 @@ body {
 
 #entete {
   background: var(--couleur-arriere-entete);
+  position: relative;
 }
+
+@keyframes borderFadeInOut {
+  0%,
+  100% {
+    background-position: -100% 0; // démarre et termine l'animation à gauche
+  }
+  50% {
+    background-position: 100% 0; // au milieu de l'animation ça se rend à droite
+  }
+}
+
+#entete::after,
+#accueil::after,
+#galerie::after,
+#evenement::after,
+#footer::after {
+  content: ""; // aucun contenu pour l'effet
+  position: absolute; // absolute de l'entête
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Couvre toute la largeur de la div */
+  height: 7px;
+  background: var(--effet-typo-h1);
+  background-size: 200% 100%; // pour couvrir l'animation au grand complet. si trop petit ça marche boff
+  animation: borderFadeInOut 4s infinite;
+}
+
 #accueil {
   background: var(--couleur-arriere-accueil);
+  position: relative;
 }
 #galerie {
   background: var(--couleur-arriere-galerie);
+  position: relative;
 }
 #evenement {
   background: var(--couleur-arriere-evenement);
+  position: relative;
 }
 #footer {
   background: var(--couleur-arriere-footer);
+  position: relative;
 }
