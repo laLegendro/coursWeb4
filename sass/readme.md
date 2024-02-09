@@ -11,7 +11,7 @@
 À réaliser:
 
 - compléter chacune des règles de style des éléments H
-- Changer les couleurs de background
+- Changer les couleurs de background - CETTE TÂCHE EST MAINTENANT COMPLÉTÉ
 - Améliorer le design général sans être trop spécifique
 - Ajouter 2 variables (transparence, largeur)
 - Créer plusieurs commit

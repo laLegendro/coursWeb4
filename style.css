@@ -19,11 +19,32 @@ ce theme a été développé dans le cadre du cours 4w4
 /* *********************** variables css mf  *************************/
 /* *******************************************************************/
 :root {
-  --couleur-arriere-accueil: red;
-  --couleur-arriere-entete: red;
-  --couleur-arriere-evenement: #dd1;
-  --couleur-arriere-footer: #aaa;
-  --couleur-arriere-galerie: #fa4;
+  --couleur-arriere-entete: linear-gradient(
+    114.9deg,
+    rgb(34, 34, 34) 8.3%,
+    rgb(0, 40, 60) 41.6%,
+    rgb(0, 143, 213) 93.4%
+  );
+  --couleur-arriere-accueil: linear-gradient(
+    -98.3deg,
+    rgb(0, 0, 0) 10.6%,
+    rgb(255, 0, 0) 97.7%
+  );
+  --couleur-arriere-galerie: linear-gradient(
+    to right,
+    #d7d2cc 0%,
+    #304352 100%
+  );
+  --couleur-arriere-evenement: linear-gradient(
+    109.7deg,
+    rgb(202, 50, 50) 5.7%,
+    rgb(252, 195, 12) 92.4%
+  );
+  --couleur-arriere-footer: linear-gradient(
+    109.6deg,
+    rgb(72, 200, 160) 11.2%,
+    rgb(32, 40, 48) 91.3%
+  );
 }
 
 /* *******************************************************************/
@@ -72,21 +93,21 @@ body {
 }
 
 #entete {
-  background-color: red;
+  background: var(--couleur-arriere-entete);
 }
 
 #accueil {
-  background-color: var(--couleur-arriere-accueil);
+  background: var(--couleur-arriere-accueil);
 }
 
 #galerie {
-  background-color: var(--couleur-arriere-galerie);
+  background: var(--couleur-arriere-galerie);
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
+  background: var(--couleur-arriere-evenement);
 }
 
 #footer {
-  background-color: var(--couleur-arriere-footer);
+  background: var(--couleur-arriere-footer);
 }/*# sourceMappingURL=style.css.map */

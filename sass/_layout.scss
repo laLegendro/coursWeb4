@@ -20,17 +20,17 @@ body {
 }
 
 #entete {
-  background-color: red;
+  background: var(--couleur-arriere-entete);
 }
 #accueil {
-  background-color: var(--couleur-arriere-accueil);
+  background: var(--couleur-arriere-accueil);
 }
 #galerie {
-  background-color: var(--couleur-arriere-galerie);
+  background: var(--couleur-arriere-galerie);
 }
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
+  background: var(--couleur-arriere-evenement);
 }
 #footer {
-  background-color: var(--couleur-arriere-footer);
+  background: var(--couleur-arriere-footer);
 }
