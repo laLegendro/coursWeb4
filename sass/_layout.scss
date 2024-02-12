@@ -15,7 +15,7 @@ body {
 .global > footer {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
   //border: 1px solid red;
-  background-color: rgba(#000, 0.1);
+  background-color: rgba(#000, 0.05);
   padding: 5rem 1rem;
 }
 
@@ -53,16 +53,20 @@ body {
 #accueil {
   background: var(--couleur-arriere-accueil);
   position: relative;
+  color: var(--couleur-accueil);
 }
 #galerie {
   background: var(--couleur-arriere-galerie);
   position: relative;
+  color: var(--couleur-galerie);
 }
 #evenement {
   background: var(--couleur-arriere-evenement);
   position: relative;
+  color: var(--couleur-evenement);
 }
 #footer {
   background: var(--couleur-arriere-footer);
   position: relative;
+  color: var(--couleur-footer);
 }

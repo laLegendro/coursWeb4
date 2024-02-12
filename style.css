@@ -19,32 +19,53 @@ ce theme a été développé dans le cadre du cours 4w4
 /* *********************** variables css mf  *************************/
 /* *******************************************************************/
 :root {
-  --couleur-arriere-entete: linear-gradient(
-    114.9deg,
-    rgb(34, 34, 34) 8.3%,
-    rgb(0, 40, 60) 41.6%,
-    rgb(0, 143, 213) 93.4%
-  );
-  --couleur-arriere-accueil: linear-gradient(
-    -98.3deg,
-    rgb(0, 0, 0) 10.6%,
-    rgb(255, 0, 0) 97.7%
-  );
-  --couleur-arriere-galerie: linear-gradient(
-    to right,
-    #d7d2cc 0%,
-    #304352 100%
-  );
-  --couleur-arriere-evenement: linear-gradient(
-    109.7deg,
-    rgb(202, 50, 50) 5.7%,
-    rgb(252, 195, 12) 92.4%
-  );
-  --couleur-arriere-footer: linear-gradient(
-    109.6deg,
-    rgb(72, 200, 160) 11.2%,
-    rgb(32, 40, 48) 91.3%
-  );
+  /*
+    --couleur-arriere-entete: linear-gradient(
+      114.9deg,
+      rgb(34, 34, 34) 8.3%,
+      rgb(0, 40, 60) 41.6%,
+      rgb(0, 143, 213) 93.4%
+    );
+    --couleur-arriere-accueil: linear-gradient(
+      -98.3deg,
+      rgb(0, 0, 0) 10.6%,
+      rgb(255, 0, 0) 97.7%
+    );
+
+    --couleur-arriere-galerie: linear-gradient(
+      to right,
+      #d7d2cc 0%,
+      #304352 100%
+    );
+
+    --couleur-arriere-evenement: linear-gradient(
+      109.7deg,
+      rgb(202, 50, 50) 5.7%,
+      rgb(252, 195, 12) 92.4%
+    );
+
+    --couleur-arriere-footer: linear-gradient(
+      109.6deg,
+      rgb(72, 200, 160) 11.2%,
+      rgb(32, 40, 48) 91.3%
+    );
+
+    // création variable 1
+    --effet-typo-h1: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 1) 25%,
+      rgba(255, 255, 255, 0.2) 50%
+    );
+
+    --largeur-flex-basis: 900px; // création variable 2
+
+  */
+  --couleur-arriere-entete: hsl(0, 50%, 50%);
+  --couleur-arriere-accueil: hsl(60, 100%, 50%);
+  --couleur-arriere-galerie: hsl(120, 100%, 50%);
+  --couleur-arriere-evenement: hsl(180, 100%, 50%);
+  --couleur-arriere-footer: hsl(240, 100%, 50%);
   --effet-typo-h1: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.2) 0%,
@@ -52,6 +73,11 @@ ce theme a été développé dans le cadre du cours 4w4
     rgba(255, 255, 255, 0.2) 50%
   );
   --largeur-flex-basis: 900px;
+  --couleur-entete: hsl(0, 50%, 15%);
+  --couleur-accueil: hsl(60, 100%, 15%);
+  --couleur-galerie: hsl(120, 100%, 15%);
+  --couleur-evenement: hsl(180, 100%, 15%);
+  --couleur-footer: hsl(240, 100%, 15%);
 }
 
 /* *******************************************************************/
@@ -79,17 +105,15 @@ h1 {
 
 h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--couleur-accueil);
 }
 
 h3 {
   font-size: clamp(1rem, -1.1875rem + 7vw, 2.75rem);
-  color: rgba(0, 0, 0, 0.5);
 }
 
 h4 {
   font-size: clamp(0.9375rem, -1.1719rem + 6.75vw, 2.625rem);
-  color: rgba(0, 0, 0, 0.4);
 }
 
 h5 {
@@ -119,7 +143,7 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   padding: 5rem 1rem;
 }
 
@@ -155,19 +179,23 @@ body {
 #accueil {
   background: var(--couleur-arriere-accueil);
   position: relative;
+  color: var(--couleur-accueil);
 }
 
 #galerie {
   background: var(--couleur-arriere-galerie);
   position: relative;
+  color: var(--couleur-galerie);
 }
 
 #evenement {
   background: var(--couleur-arriere-evenement);
   position: relative;
+  color: var(--couleur-evenement);
 }
 
 #footer {
   background: var(--couleur-arriere-footer);
   position: relative;
+  color: var(--couleur-footer);
 }/*# sourceMappingURL=style.css.map */

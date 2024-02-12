@@ -23,15 +23,13 @@ h1 {
 
 h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
-  color: rgba(#000, 0.6);
+  color: var(--couleur-accueil);
 }
 h3 {
   font-size: clamp(1rem, -1.1875rem + 7vw, 2.75rem);
-  color: rgba(#000, 0.5);
 }
 h4 {
   font-size: clamp(0.9375rem, -1.1719rem + 6.75vw, 2.625rem);
-  color: rgba(#000, 0.4);
 }
 h5 {
   font-size: clamp(0.875rem, -1.1563rem + 6.5vw, 2.5rem);
