@@ -71,7 +71,7 @@ ce theme a été développé dans le cadre du cours 4w4
   --l-couleur-arrierre: 50%;
   /*couleur avant plan*/
   --s-couleur: 100%;
-  --l-couleur: 15%;
+  --l-couleur: 80%;
   --hu2: calc(var(--hu1) + var(--increment-angle));
   --hu3: calc(var(--hu2) + var(--increment-angle));
   --hu4: calc(var(--hu3) + var(--increment-angle));
@@ -221,6 +221,8 @@ body {
   background: var(--couleur-arriere-galerie);
   position: relative;
   color: var(--couleur-galerie);
+  z-index: 1;
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 50%);
 }
 
 #evenement {
@@ -233,4 +235,44 @@ body {
   background: var(--couleur-arriere-footer);
   position: relative;
   color: var(--couleur-footer);
+}
+
+/* *******************************************************************/
+/* ******************** règles de pagination  ************************/
+/* *******************************************************************/
+.vague {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 86px;
+}
+
+/* *******************************************************************/
+/* ******************** règles de pagination  ************************/
+/* *******************************************************************/
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-galerie);
 }/*# sourceMappingURL=style.css.map */

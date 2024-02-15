@@ -1,19 +1,27 @@
-# Laboratoire #1
+# Laboratoire #2
 
-## introduction a Sass et révision HTML/CSS
+## Création d'une palette de couleur avec la fonction hsl
 
-### concevoir une page de plusieurs sections qui contiennent éléments:
+## Ajouter des effest de vague et une diagonal
+
+### continuer la version du laboratoire #1
 
 - Doissier Sass
-- Fichier normalize.css
+- Utilisations de différentes technique pour élaborer une palette de couleurs
+- Utilisation de la règle 60-30-10
 - style.css
 
 À réaliser:
 
-- compléter chacune des règles de style des éléments H -- CETTE TÂCHE EST COMPLÉTÉE
-- Changer les couleurs de background - CETTE TÂCHE EST MAINTENANT COMPLÉTÉ
-- Améliorer le design général sans être trop spécifique -- CETTE TÂCHE EST COMPLÉTÉ (BORDER COOL D'AJOUTÉ - AUSSI EFFETS SUPPLÉMENTAIRES SUR LE H1)
-- Ajouter 2 variables (transparence, largeur) -- TÂCHE COMPLÉTÉ: VARIABLE 1: EFFET TYPO H1, VARIABLE 2: LARGEUR FLEX BASIS
-- Créer plusieurs commit -- TÂCHE COMPLETÉE: PLUS QUE 6 COMMITS ONT ÉTÉ FAITS
-- Une Git-hub-page -- TÂCHE COMPLETÉE
-- mettre l'adresse du github page: https://lalegendro.github.io/coursWeb4/
+- compléter chacune des règles de style des éléments H
+- Changer les couleurs de background et les couleurs du H
+- Ajouter les éléments bouton, lien a, blockquotes
+- Améliorer le design général sans être trop spécifique
+- Ajouter plusieurs variables
+- Créer plusieurs commit
+- Une Git-hub-page
+- mettre l'adresse du github page:
+
+### MA GITHUB PAGE:
+
+- https://lalegendro.github.io/coursWeb4/

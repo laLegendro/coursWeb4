@@ -59,6 +59,12 @@ body {
   background: var(--couleur-arriere-galerie);
   position: relative;
   color: var(--couleur-galerie);
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    var(--couleur-arriere-accueil) 50%,
+    var(--couleur-arriere-evenement) 50%
+  );
 }
 #evenement {
   background: var(--couleur-arriere-evenement);
