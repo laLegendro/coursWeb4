@@ -8,7 +8,7 @@
 
 - Doissier Sass
 - Utilisations de différentes technique pour élaborer une palette de couleurs
-- Utilisation de la règle 60-30-10
+- Utilisation de la règle 60-30-10 .... c'est quoi la règle 60-30-10???
 - style.css
 
 À réaliser:

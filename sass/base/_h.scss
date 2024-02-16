@@ -35,6 +35,8 @@ h6 {
 }
 
 p {
+  font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
+  color: var(--couleur-p);
 }
 
 hr {

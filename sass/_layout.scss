@@ -28,14 +28,34 @@ body {
 #galerie {
   background: var(--couleur-arriere-galerie);
   position: relative;
-
   z-index: 1;
   background: linear-gradient(
     180deg,
     var(--couleur-arriere-accueil) 50%,
     var(--couleur-arriere-evenement) 50%
   );
+  // utilisation du nesting
+  blockquote {
+    font-style: italic;
+    font-size: clamp(0.75rem, 0.2813rem + 1.5vw, 1.125rem);
+    font-family: "Times New Roman", Times, serif; /* Changement de police */
+    color: var(--couleur-p);
+  }
+
+  blockquote:before {
+    content: open-quote; /* Ajoute un guillemet ouvrant */
+    font-size: 6em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote:after {
+    content: close-quote; /* Ajoute un guillemet fermant */
+    font-size: 6em;
+  }
 }
+
 #evenement {
   background: var(--couleur-arriere-evenement);
   position: relative;
@@ -43,4 +63,10 @@ body {
 #footer {
   background: var(--couleur-arriere-footer);
   position: relative;
+
+  a {
+    color: white;
+    font-size: 4rem; /*font Awesome est considéré comme une police de caractère, donc pour les agrandir, il faut utiliser font size*/
+    padding-right: 1rem; /* espace entre mes icons*/
+  }
 }

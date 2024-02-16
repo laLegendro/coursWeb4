@@ -31,6 +31,7 @@ ce theme a été développé dans le cadre du cours 4w4
   --couleur-h3: hsl(5, 99%, 42%);
   --couleur-h4: hsl(30, 30%, 100%);
   --couleur-h5: hsl(208, 100%, 43%);
+  --couleur-p: hsl(220, 100%, 13%);
   --largeur-flex-basis: 900px;
 }
 
@@ -76,6 +77,11 @@ h6 {
   color: var(--couleur-h6);
 }
 
+p {
+  font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
+  color: var(--couleur-p);
+}
+
 /* *******************************************************************/
 /* ******************** règles de pagination  ************************/
 /* *******************************************************************/
@@ -113,6 +119,23 @@ body {
   z-index: 1;
   background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 50%);
 }
+#galerie blockquote {
+  font-style: italic;
+  font-size: clamp(0.75rem, 0.2813rem + 1.5vw, 1.125rem);
+  font-family: "Times New Roman", Times, serif; /* Changement de police */
+  color: var(--couleur-p);
+}
+#galerie blockquote:before {
+  content: open-quote; /* Ajoute un guillemet ouvrant */
+  font-size: 6em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+#galerie blockquote:after {
+  content: close-quote; /* Ajoute un guillemet fermant */
+  font-size: 6em;
+}
 
 #evenement {
   background: var(--couleur-arriere-evenement);
@@ -122,6 +145,11 @@ body {
 #footer {
   background: var(--couleur-arriere-footer);
   position: relative;
+}
+#footer a {
+  color: white;
+  font-size: 4rem; /*font Awesome est considéré comme une police de caractère, donc pour les agrandir, il faut utiliser font size*/
+  padding-right: 1rem; /* espace entre mes icons*/
 }
 
 /* *******************************************************************/
