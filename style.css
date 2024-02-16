@@ -145,11 +145,19 @@ body {
 #footer {
   background: var(--couleur-arriere-footer);
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 #footer a {
   color: white;
   font-size: 4rem; /*font Awesome est considéré comme une police de caractère, donc pour les agrandir, il faut utiliser font size*/
   padding-right: 1rem; /* espace entre mes icons*/
+}
+#footer .material-icons span {
+  color: white;
+  cursor: pointer;
+  font-size: 100%;
 }
 
 /* *******************************************************************/

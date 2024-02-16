@@ -15,9 +15,9 @@
 
 - compléter chacune des règles de style des éléments H - Pour l'instant ça reste blanc
 - Changer les couleurs de background et les couleurs du H - couleurs de background et du H completés
-- Ajouter les éléments bouton, lien a, blockquotes
-- Améliorer le design général sans être trop spécifique
-- Ajouter plusieurs variables
+- Ajouter les éléments bouton, lien a, blockquotes - TÂCHE COMPLETÉE
+- Améliorer le design général sans être trop spécifique - TÂCHE COMPLETÉE
+- Ajouter plusieurs variables - TÂCHE COMPLETÉE ET INITIATION DU NESTING
 - Créer plusieurs commit - PLUSIEURS COMMITS DE FAIT
 - Une Git-hub-page - Page GITHUB DÉPLOYÉE
 - mettre l'adresse du github page:
