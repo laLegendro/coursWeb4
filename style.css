@@ -19,100 +19,19 @@ ce theme a été développé dans le cadre du cours 4w4
 /* *********************** variables css mf  *************************/
 /* *******************************************************************/
 :root {
-  /*
-    --couleur-arriere-entete: linear-gradient(
-      114.9deg,
-      rgb(34, 34, 34) 8.3%,
-      rgb(0, 40, 60) 41.6%,
-      rgb(0, 143, 213) 93.4%
-    );
-    --couleur-arriere-accueil: linear-gradient(
-      -98.3deg,
-      rgb(0, 0, 0) 10.6%,
-      rgb(255, 0, 0) 97.7%
-    );
-
-    --couleur-arriere-galerie: linear-gradient(
-      to right,
-      #d7d2cc 0%,
-      #304352 100%
-    );
-
-    --couleur-arriere-evenement: linear-gradient(
-      109.7deg,
-      rgb(202, 50, 50) 5.7%,
-      rgb(252, 195, 12) 92.4%
-    );
-
-    --couleur-arriere-footer: linear-gradient(
-      109.6deg,
-      rgb(72, 200, 160) 11.2%,
-      rgb(32, 40, 48) 91.3%
-    );
-
-    // création variable 1
-    --effet-typo-h1: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 1) 25%,
-      rgba(255, 255, 255, 0.2) 50%
-    );
-
-    --largeur-flex-basis: 900px; // création variable 2
-
-  */
-  --nb-element: 5;
-  --increment-angle: calc(360 / var(--nb-element));
-  /* 360 divisé par 5 = 72*/
-  --angle-initial: 180;
-  --hu1: var(--angle-initial);
-  /* couleur d'arriere plan*/
-  --s-couleur-arriere: 100%;
-  --l-couleur-arrierre: 50%;
-  /*couleur avant plan*/
-  --s-couleur: 100%;
-  --l-couleur: 80%;
-  --hu2: calc(var(--hu1) + var(--increment-angle));
-  --hu3: calc(var(--hu2) + var(--increment-angle));
-  --hu4: calc(var(--hu3) + var(--increment-angle));
-  --hu5: calc(var(--hu4) + var(--increment-angle));
-  --couleur-arriere-entete: hsl(
-    var(--hu1),
-    var(--s-couleur-arriere),
-    var(--l-couleur-arrierre)
-  );
-  --couleur-arriere-accueil: hsl(
-    var(--hu2),
-    var(--s-couleur-arriere),
-    var(--l-couleur-arrierre)
-  );
-  --couleur-arriere-galerie: hsl(
-    var(--hu3),
-    var(--s-couleur-arriere),
-    var(--l-couleur-arrierre)
-  );
-  --couleur-arriere-evenement: hsl(
-    var(--hu4),
-    var(--s-couleur-arriere),
-    var(--l-couleur-arrierre)
-  );
-  --couleur-arriere-footer: hsl(
-    var(--hu5),
-    var(--s-couleur-arriere),
-    var(--l-couleur-arrierre)
-  );
-  --effet-typo-h1: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 1) 25%,
-    rgba(255, 255, 255, 0.2) 50%
-  );
+  /* j'ai enlevé tous les calculs qu'on a fait en classe. j'ai trouvé ça
+  inutile et compliqué pour rien. je vais quand même utiliser le hsl comme demandé */
+  --couleur-arriere-entete: hsl(48, 67%, 49%);
+  --couleur-arriere-accueil: hsl(179, 52%, 47%);
+  --couleur-arriere-galerie: hsl(328, 55%, 57%);
+  --couleur-arriere-evenement: hsl(179, 40%, 50%);
+  --couleur-arriere-footer: hsl(48, 67%, 49%);
+  --couleur-h1: hsl(220, 98%, 30%);
+  --couleur-h2: hsl(10, 10%, 100%);
+  --couleur-h3: hsl(5, 99%, 42%);
+  --couleur-h4: hsl(30, 30%, 100%);
+  --couleur-h5: hsl(208, 100%, 43%);
   --largeur-flex-basis: 900px;
-  --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-  --couleur-accueil: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
-  --couleur-galerie: hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
-  --couleur-evenement: hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
-  --couleur-footer: hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
 }
 
 /* *******************************************************************/
@@ -129,34 +48,32 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 */
 h1 {
   font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
-  color: white;
-  background: var(--effet-typo-h1);
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  color: var(--couleur-h1);
 }
 
 h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
-  color: var(--couleur-accueil);
+  color: var(--couleur-h2);
 }
 
 h3 {
-  font-size: clamp(1rem, -1.1875rem + 7vw, 2.75rem);
+  font-size: clamp(0.75rem, -1.1875rem + 7vw, 2.75rem);
+  color: var(--couleur-h3);
 }
 
 h4 {
   font-size: clamp(0.9375rem, -1.1719rem + 6.75vw, 2.625rem);
+  color: var(--couleur-h4);
 }
 
 h5 {
   font-size: clamp(0.875rem, -1.1563rem + 6.5vw, 2.5rem);
+  color: var(--couleur-h5);
 }
 
 h6 {
   font-size: clamp(0.8125rem, -1.1406rem + 6.25vw, 2.375rem);
+  color: var(--couleur-h6);
 }
 
 /* *******************************************************************/
@@ -178,7 +95,6 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
-  background-color: rgba(0, 0, 0, 0.05);
   padding: 5rem 1rem;
 }
 
@@ -187,40 +103,13 @@ body {
   position: relative;
 }
 
-@keyframes borderFadeInOut {
-  0%, 100% {
-    background-position: -100% 0;
-  }
-  50% {
-    background-position: 100% 0;
-  }
-}
-#entete::after,
-#accueil::after,
-#galerie::after,
-#evenement::after,
-#footer::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%; /* Couvre toute la largeur de la div */
-  height: 7px;
-  background: var(--effet-typo-h1);
-  background-size: 200% 100%;
-  animation: borderFadeInOut 4s infinite;
-}
-
 #accueil {
   background: var(--couleur-arriere-accueil);
-  position: relative;
-  color: var(--couleur-accueil);
 }
 
 #galerie {
   background: var(--couleur-arriere-galerie);
   position: relative;
-  color: var(--couleur-galerie);
   z-index: 1;
   background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 50%);
 }
@@ -228,13 +117,11 @@ body {
 #evenement {
   background: var(--couleur-arriere-evenement);
   position: relative;
-  color: var(--couleur-evenement);
 }
 
 #footer {
   background: var(--couleur-arriere-footer);
   position: relative;
-  color: var(--couleur-footer);
 }
 
 /* *******************************************************************/

@@ -10,32 +10,28 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 
 h1 {
   font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
-  color: white;
-
-  background: var(--effet-typo-h1); //je dois mettre un background dans la typo
-
-  background-size: 200% 100%; // l'agrandir sinon l'effet ne se produit pas genre
-  background-clip: text; // je clippe l'arrière plan à la typo
-  -webkit-background-clip: text; // je dois spécifier que le tout sera dans la typo
-  -webkit-text-fill-color: transparent;
-  display: inline-block; // pour faire mon animation je dois rendre le h1 inline block
+  color: var(--couleur-h1);
 }
 
 h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
-  color: var(--couleur-accueil);
+  color: var(--couleur-h2);
 }
 h3 {
-  font-size: clamp(1rem, -1.1875rem + 7vw, 2.75rem);
+  font-size: clamp(0.75rem, -1.1875rem + 7vw, 2.75rem);
+  color: var(--couleur-h3);
 }
 h4 {
   font-size: clamp(0.9375rem, -1.1719rem + 6.75vw, 2.625rem);
+  color: var(--couleur-h4);
 }
 h5 {
   font-size: clamp(0.875rem, -1.1563rem + 6.5vw, 2.5rem);
+  color: var(--couleur-h5);
 }
 h6 {
   font-size: clamp(0.8125rem, -1.1406rem + 6.25vw, 2.375rem);
+  color: var(--couleur-h6);
 }
 
 p {
