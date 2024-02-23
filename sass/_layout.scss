@@ -52,13 +52,13 @@ body {
     font-family: "Times New Roman", Times, serif; /* Changement de police */
     transform: rotate(-5deg);
     color: var(--couleur-p);
-    max-width: 80%; /* Set a max-width for the blockquote if needed */
-    margin: auto; /* This will help with horizontal centering */
-    display: flex; /* Use Flexbox to center vertically */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
-    text-align: center; /* Ensure text within blockquote is centered */
-    padding: 2rem 0; /* Add vertical padding */
+    max-width: 80%;
+    margin: auto; /* pour centrer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0;
   }
 
   blockquote:before {
@@ -76,7 +76,7 @@ body {
   blockquote:after {
     content: close-quote; /* Ajoute un guillemet fermant */
     font-size: 6em;
-    // Align quote to the center of the blockquote
+
     display: block;
     margin-left: auto;
     margin-right: auto;
