@@ -1,14 +1,10 @@
 .recherche {
   width: 300px;
   height: 100px;
+  margin-bottom: 100px;
 
   .rechercher {
-    position: absolute;
-    margin: auto; /* pour bien le centrer et pour que tout fonctionne correctement*/
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include positionnement;
     width: 80px;
     height: 80px;
     background: var(--couleur-accent);
@@ -57,19 +53,14 @@
   }
 
   input {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include positionnement;
     width: 50px;
     height: 50px;
     outline: none; /*pour enlever les horribles bordures*/
     border: none; /*pour enlever les horribles bordures*/
 
     background: var(--couleur-accent);
-    color: white;
+
     text-shadow: 0 0 10px var(--couleur-accent);
     padding: 0 80px 0 20px;
     border-radius: 30px;

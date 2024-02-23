@@ -4,6 +4,16 @@
   gap: 2rem;
 }
 
-.sociaux svg {
-  fill: red;
+.sociaux a {
+  color: white; // This styles the icon color
+  font-size: 2rem; // Adjust the icon size as needed
+  padding-right: 1rem; // Adds space to the right of each icon
+  transition: all 1s ease; // Smooth transition for hover effects
+
+  &:hover {
+    color: var(--couleur-accent); // Change color on hover, not fill
+    cursor: pointer;
+    transform: scale(1.3); // Enlarge the icon to 130% of its size
+    margin-top: 1rem; // Move the icon down
+  }
 }
