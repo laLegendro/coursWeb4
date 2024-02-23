@@ -400,3 +400,9 @@ body {
   transform: scale(1.3);
   margin-top: 1rem;
 }
+
+@media (max-width: 700px) {
+  .sociaux a {
+    font-size: 3rem;
+  }
+}
