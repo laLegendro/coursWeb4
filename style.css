@@ -19,19 +19,10 @@ ce theme a été développé dans le cadre du cours 4w4
 /* *********************** variables css mf  *************************/
 /* *******************************************************************/
 :root {
-  /* j'ai enlevé tous les calculs qu'on a fait en classe. j'ai trouvé ça
-  inutile et compliqué pour rien. je vais quand même utiliser le hsl comme demandé */
-  --couleur-arriere-entete: hsl(48, 67%, 49%);
-  --couleur-arriere-accueil: hsl(179, 52%, 47%);
-  --couleur-arriere-galerie: hsl(328, 55%, 57%);
-  --couleur-arriere-evenement: hsl(179, 40%, 50%);
-  --couleur-arriere-footer: hsl(48, 67%, 49%);
-  --couleur-h1: hsl(220, 98%, 30%);
-  --couleur-h2: hsl(10, 10%, 100%);
-  --couleur-h3: hsl(5, 99%, 42%);
-  --couleur-h4: hsl(30, 30%, 100%);
-  --couleur-h5: hsl(208, 100%, 43%);
-  --couleur-p: hsl(220, 100%, 13%);
+  --couleur-principale: hsl(48, 67%, 49%);
+  --couleur-secondaire: hsl(179, 40%, 50%);
+  --couleur-accent: hsl(328, 55%, 57%);
+  --couleur-secondaire-foncee: hsl(179, 40%, 40%);
   --largeur-flex-basis: 900px;
 }
 
@@ -49,46 +40,85 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
 */
 h1 {
   font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
-  color: var(--couleur-h1);
+  color: white;
 }
 
 h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
-  color: var(--couleur-h2);
+  color: black;
 }
 
 h3 {
   font-size: clamp(0.75rem, -1.1875rem + 7vw, 2.75rem);
-  color: var(--couleur-h3);
+  color: var(--couleur-accent);
 }
 
 h4 {
   font-size: clamp(0.9375rem, -1.1719rem + 6.75vw, 2.625rem);
-  color: var(--couleur-h4);
+  color: var(--couleur-accent);
 }
 
 h5 {
   font-size: clamp(0.875rem, -1.1563rem + 6.5vw, 2.5rem);
-  color: var(--couleur-h5);
+  color: var(--couleur-accent);
 }
 
 h6 {
   font-size: clamp(0.8125rem, -1.1406rem + 6.25vw, 2.375rem);
-  color: var(--couleur-h6);
+  color: var(--couleur-accent);
 }
 
 p {
   font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
-  color: var(--couleur-p);
+  color: black;
 }
 
+button.entete__button {
+  font-size: clamp(0.75rem, -1.1875rem + 7vw, 2.75rem);
+  padding: 2rem;
+  background-color: var(--couleur-accent);
+  transition: background-color 0.4s, transform 0.2s, box-shadow 0.4s, letter-spacing 0.4s;
+  margin: 2rem;
+  border: none;
+  -webkit-box-shadow: 2px 2px 2px 1px #000000;
+  box-shadow: 2px 2px 2px 1px #000000;
+}
+button.entete__button:hover {
+  background-color: var(--couleur-secondaire);
+  transform: translateY(-0.5rem);
+  letter-spacing: 0.2rem;
+  -webkit-box-shadow: 4px 4px 20px 5px #000000;
+  box-shadow: 4px 4px 20px 5px #000000;
+}
+button.entete__button:active {
+  background-color: var(--couleur-secondaire-foncee);
+  transform: translateY(0.2rem);
+  -webkit-box-shadow: 2px 2px 2px 1px #000000;
+  box-shadow: 2px 2px 2px 1px #000000;
+}
+
+/* je veux que le boutton soit plus petit. si je ne change pas ceci, il sera énorme*/
+@media (max-width: 700px) {
+  button.entete__button {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
 /* *******************************************************************/
-/* ******************** règles de pagination  ************************/
+/* ******************** les sections des pages  ************************/
 /* *******************************************************************/
+* ::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
   font-family: "Prompt", sans-serif;
+  font-weight: 400;
 }
 
 .global {
@@ -102,28 +132,41 @@ body {
 .global > footer {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
   padding: 5rem 1rem;
+  flex: 0 1 1100px;
+}
+
+.global > header {
+  flex: 0 1 1300px;
 }
 
 #entete {
-  background: var(--couleur-arriere-entete);
+  background: var(--couleur-principale);
   position: relative;
 }
 
 #accueil {
-  background: var(--couleur-arriere-accueil);
+  background: var(--couleur-secondaire);
 }
 
 #galerie {
-  background: var(--couleur-arriere-galerie);
+  background: var(--couleur-accent);
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 50%);
+  background: var(--couleur-secondaire) 50%;
 }
 #galerie blockquote {
   font-style: italic;
-  font-size: clamp(0.75rem, 0.2813rem + 1.5vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
   font-family: "Times New Roman", Times, serif; /* Changement de police */
+  transform: rotate(-5deg);
   color: var(--couleur-p);
+  max-width: 80%; /* Set a max-width for the blockquote if needed */
+  margin: auto; /* This will help with horizontal centering */
+  display: flex; /* Use Flexbox to center vertically */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Ensure text within blockquote is centered */
+  padding: 2rem 0; /* Add vertical padding */
 }
 #galerie blockquote:before {
   content: open-quote; /* Ajoute un guillemet ouvrant */
@@ -131,37 +174,63 @@ body {
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #galerie blockquote:after {
   content: close-quote; /* Ajoute un guillemet fermant */
   font-size: 6em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #evenement {
-  background: var(--couleur-arriere-evenement);
+  background: var(--couleur-secondaire);
   position: relative;
 }
 
 #footer {
-  background: var(--couleur-arriere-footer);
+  background: var(--couleur-principale);
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-#footer a {
-  color: white;
-  font-size: 4rem; /*font Awesome est considéré comme une police de caractère, donc pour les agrandir, il faut utiliser font size*/
-  padding-right: 1rem; /* espace entre mes icons*/
+
+.entete__header {
+  background-image: url("images/aDefinir.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: 30%;
 }
-#footer .material-icons span {
-  color: white;
-  cursor: pointer;
-  font-size: 100%;
+
+.entete__header span {
+  display: block;
+}
+
+/*jusqu'à 700 px tout sera en colonne, incluant l'image arière plan*/
+@media (max-width: 700px) {
+  .entete__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: 50% 3%;
+    background-size: 15%;
+  }
+}
+.accueil__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
 }
 
 /* *******************************************************************/
-/* ******************** règles de pagination  ************************/
+/* ******************** effets  ************************/
 /* *******************************************************************/
 .vague {
   position: absolute;
@@ -180,9 +249,6 @@ body {
   height: 86px;
 }
 
-/* *******************************************************************/
-/* ******************** règles de pagination  ************************/
-/* *******************************************************************/
 .diagonal {
   position: relative;
   isolation: isolate;
@@ -197,5 +263,128 @@ body {
   right: 0;
   z-index: -1;
   transform: skewY(-5deg);
-  background-color: var(--couleur-arriere-galerie);
+  background-color: var(--couleur-accent);
+}
+
+/* *******************************************************************/
+/* ******************** Composants  ************************/
+/* *******************************************************************/
+.recherche {
+  width: 300px;
+  height: 100px;
+}
+.recherche .rechercher {
+  position: absolute;
+  margin: auto; /* pour bien le centrer et pour que tout fonctionne correctement*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: var(--couleur-accent);
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+  /*construction de l'icône recherche*/
+  /*la manche de la loope*/
+  /*la manche de la loope*/
+}
+.recherche .rechercher:hover {
+  cursor: pointer;
+  transform: scale(120%);
+}
+.recherche .rechercher::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(50deg);
+  transition: all 0.5s;
+}
+.recherche .rechercher::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.recherche input {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  outline: none; /*pour enlever les horribles bordures*/
+  border: none; /*pour enlever les horribles bordures*/
+  background: var(--couleur-accent);
+  color: white;
+  text-shadow: 0 0 10px var(--couleur-accent);
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 var(--couleur-accent), 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+  /* pour créer un effet de transition*/
+}
+.recherche input:hover {
+  cursor: pointer;
+}
+.recherche input:focus {
+  width: 300px;
+  opacity: 1;
+  cursor: text;
+}
+.recherche input:focus ~ .rechercher {
+  right: -420px;
+  background: var(--couleur-secondaire);
+  z-index: 6;
+}
+.recherche input:focus ~ .rechercher::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+.recherche input:focus ~ .rechercher::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+.recherche input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sociaux svg {
+  fill: red;
 }/*# sourceMappingURL=style.css.map */

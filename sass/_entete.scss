@@ -1,0 +1,22 @@
+.entete__header {
+  background-image: url("images/aDefinir.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: 30%;
+}
+
+.entete__header span {
+  display: block;
+}
+
+/*jusqu'à 700 px tout sera en colonne, incluant l'image arière plan*/
+@media (max-width: 700px) {
+  .entete__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: 50% 3%;
+    background-size: 15%;
+  }
+}

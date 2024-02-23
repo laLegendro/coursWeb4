@@ -1,7 +1,15 @@
+* ::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
   font-family: "Prompt", sans-serif;
+  font-weight: 400;
 }
 
 .global {
@@ -15,31 +23,42 @@ body {
 .global > footer {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
   padding: 5rem 1rem;
+  flex: 0 1 1100px;
+}
+
+.global > header {
+  flex: 0 1 1300px;
 }
 
 #entete {
-  background: var(--couleur-arriere-entete);
+  background: var(--couleur-principale);
   position: relative;
 }
 
 #accueil {
-  background: var(--couleur-arriere-accueil);
+  background: var(--couleur-secondaire);
 }
+
 #galerie {
-  background: var(--couleur-arriere-galerie);
+  background: var(--couleur-accent);
   position: relative;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    var(--couleur-arriere-accueil) 50%,
-    var(--couleur-arriere-evenement) 50%
-  );
+  background: var(--couleur-secondaire) 50%;
+
   // utilisation du nesting
   blockquote {
     font-style: italic;
-    font-size: clamp(0.75rem, 0.2813rem + 1.5vw, 1.125rem);
+    font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
     font-family: "Times New Roman", Times, serif; /* Changement de police */
+    transform: rotate(-5deg);
     color: var(--couleur-p);
+    max-width: 80%; /* Set a max-width for the blockquote if needed */
+    margin: auto; /* This will help with horizontal centering */
+    display: flex; /* Use Flexbox to center vertically */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Ensure text within blockquote is centered */
+    padding: 2rem 0; /* Add vertical padding */
   }
 
   blockquote:before {
@@ -48,34 +67,30 @@ body {
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
+    // Align quote to the center of the blockquote
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   blockquote:after {
     content: close-quote; /* Ajoute un guillemet fermant */
     font-size: 6em;
+    // Align quote to the center of the blockquote
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 #evenement {
-  background: var(--couleur-arriere-evenement);
+  background: var(--couleur-secondaire);
   position: relative;
 }
 #footer {
-  background: var(--couleur-arriere-footer);
+  background: var(--couleur-principale);
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  a {
-    color: white;
-    font-size: 4rem; /*font Awesome est considéré comme une police de caractère, donc pour les agrandir, il faut utiliser font size*/
-    padding-right: 1rem; /* espace entre mes icons*/
-  }
-
-  .material-icons span {
-    color: white;
-    cursor: pointer;
-    font-size: 100%;
-  }
 }

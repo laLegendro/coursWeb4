@@ -1,0 +1,35 @@
+button.entete__button {
+  font-size: clamp(0.75rem, -1.1875rem + 7vw, 2.75rem);
+  padding: 2rem;
+  background-color: var(--couleur-accent);
+  transition: background-color 0.4s, transform 0.2s, box-shadow 0.4s,
+    letter-spacing 0.4s;
+  margin: 2rem;
+  border: none;
+  -webkit-box-shadow: 2px 2px 2px 1px #000000;
+  box-shadow: 2px 2px 2px 1px #000000;
+
+  &:hover {
+    background-color: var(--couleur-secondaire);
+    transform: translateY(-0.5rem);
+    letter-spacing: 0.2rem;
+
+    -webkit-box-shadow: 4px 4px 20px 5px #000000;
+    box-shadow: 4px 4px 20px 5px #000000;
+  }
+
+  &:active {
+    background-color: var(--couleur-secondaire-foncee);
+    transform: translateY(0.2rem);
+    -webkit-box-shadow: 2px 2px 2px 1px #000000;
+    box-shadow: 2px 2px 2px 1px #000000;
+  }
+}
+
+/* je veux que le boutton soit plus petit. si je ne change pas ceci, il sera énorme*/
+@media (max-width: 700px) {
+  button.entete__button {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}

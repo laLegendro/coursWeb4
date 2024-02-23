@@ -1,21 +1,9 @@
 :root {
-  /* j'ai enlevé tous les calculs qu'on a fait en classe. j'ai trouvé ça
-  inutile et compliqué pour rien. je vais quand même utiliser le hsl comme demandé */
-
-  // couleurs arrière plan
-  --couleur-arriere-entete: hsl(48, 67%, 49%);
-  --couleur-arriere-accueil: hsl(179, 52%, 47%);
-  --couleur-arriere-galerie: hsl(328, 55%, 57%);
-  --couleur-arriere-evenement: hsl(179, 40%, 50%);
-  --couleur-arriere-footer: hsl(48, 67%, 49%);
-
-  // couleurs pour les H
-  --couleur-h1: hsl(220, 98%, 30%);
-  --couleur-h2: hsl(10, 10%, 100%);
-  --couleur-h3: hsl(5, 99%, 42%);
-  --couleur-h4: hsl(30, 30%, 100%);
-  --couleur-h5: hsl(208, 100%, 43%);
-  --couleur-p: hsl(220, 100%, 13%);
+  // couleurs 60% (couleur principale) 30% (couleur secondaire), 10% (couleur accent)
+  --couleur-principale: hsl(48, 67%, 49%); //couleur 60%
+  --couleur-secondaire: hsl(179, 40%, 50%); //coulleur 30%
+  --couleur-accent: hsl(328, 55%, 57%); //couleur 10
+  --couleur-secondaire-foncee: hsl(179, 40%, 40%);
 
   // autres variables
   --largeur-flex-basis: 900px;
