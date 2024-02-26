@@ -406,3 +406,18 @@ body {
     font-size: 3rem;
   }
 }
+
+.section__cours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.carte {
+  border: 1px solid var(--couleur-accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 23%;
+  padding: 1rem;
+}
