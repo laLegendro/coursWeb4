@@ -116,7 +116,12 @@
 }
 */
 .recherche .rechercher {
-  /* @include positionnement; - This needs to be converted to CSS if it's a mixin or removed if not applicable */
+  position: absolute;
+  margin: auto;
+  top: -20;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 80px;
   height: 80px;
   background: var(--couleur-accent);
@@ -162,7 +167,12 @@
 }
 
 .recherche input {
-  /* @include positionnement; - This needs to be converted to CSS if it's a mixin or removed if not applicable */
+  position: absolute;
+  margin: auto;
+  top: -20;x
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 50px;
   height: 50px;
   outline: none;

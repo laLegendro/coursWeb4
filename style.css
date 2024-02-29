@@ -385,7 +385,12 @@ body {
 }
 */
 .recherche .rechercher {
-  /* @include positionnement; - This needs to be converted to CSS if it's a mixin or removed if not applicable */
+  position: absolute;
+  margin: auto;
+  top: -20;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 80px;
   height: 80px;
   background: var(--couleur-accent);
@@ -431,7 +436,12 @@ body {
 }
 
 .recherche input {
-  /* @include positionnement; - This needs to be converted to CSS if it's a mixin or removed if not applicable */
+  position: absolute;
+  margin: auto;
+  top: -20;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 50px;
   height: 50px;
   outline: none;
@@ -516,6 +526,7 @@ body {
 }
 
 .carte {
+  background-color: var(--couleur-secondaire);
   border: 1px solid var(--couleur-accent);
   display: flex;
   flex-direction: column;
