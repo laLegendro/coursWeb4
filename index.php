@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mon thème</title>
+
+  <!--link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" /-->
+
+  <!-- pour aller chercher les pages de style, pour wordpress -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css'; ?>" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css'; ?>" />
 
@@ -49,11 +54,20 @@
         echo $contenu;
         };
         }*/ -->
-
+        <!-- un post c un enregistrement -->
         <?php if (have_posts()) :
-          while (have_posts()) : the_post(); ?>
+          while (have_posts()) : the_post();
+            $titre = get_the_title();
+            $sigle = substr($titre, 0, 7);
+            //strpos()
+            // string position
+
+
+        ?>
             <div class="carte">
-              <h5><?php the_title(); ?></h5>
+              <!-- si pas decho sa ne saffiche pas -->
+              <h5><?php echo $sigle; ?></h5>
+              <h5><?php echo $titre; ?></h5>
               <p><?php echo wp_trim_words(get_the_content(), 10); ?></p>
             </div>
           <?php endwhile; ?>
