@@ -1,4 +1,4 @@
-.recherche {
+/*.recherche {
   width: 300px;
   height: 100px;
   margin-bottom: 100px;
@@ -19,7 +19,7 @@
     }
 
     /*construction de l'icône recherche*/
-    /*la manche de la loope*/
+/*la manche de la loope
     &::before {
       content: "";
       position: absolute;
@@ -35,7 +35,7 @@
       transition: all 0.5s;
     }
 
-    /*la manche de la loope*/
+    /*la manche de la loope
     &::after {
       content: "";
       position: absolute;
@@ -56,8 +56,8 @@
     @include positionnement;
     width: 50px;
     height: 50px;
-    outline: none; /*pour enlever les horribles bordures*/
-    border: none; /*pour enlever les horribles bordures*/
+    outline: none; /*pour enlever les horribles bordures
+    border: none; /*pour enlever les horribles bordures
 
     background: var(--couleur-accent);
 
@@ -81,7 +81,7 @@
       cursor: text;
     }
 
-    /* pour créer un effet de transition*/
+    /* pour créer un effet de transition
     &:focus ~ .rechercher {
       right: -420px;
       background: var(--couleur-secondaire);
@@ -108,4 +108,110 @@
       font-weight: bolder;
     }
   }
+}
+.recherche {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 100px;
+}
+*/
+.recherche .rechercher {
+  /* @include positionnement; - This needs to be converted to CSS if it's a mixin or removed if not applicable */
+  width: 80px;
+  height: 80px;
+  background: var(--couleur-accent);
+  border-radius: 50%;
+  transition: all 1s;
+  z-index: 4;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+
+.recherche .rechercher:hover {
+  cursor: pointer;
+  transform: scale(120%);
+}
+
+.recherche .rechercher::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(50deg);
+  transition: all 0.5s;
+}
+
+.recherche .rechercher::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+
+.recherche input {
+  /* @include positionnement; - This needs to be converted to CSS if it's a mixin or removed if not applicable */
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: var(--couleur-accent);
+  text-shadow: 0 0 10px var(--couleur-accent);
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 25px 0 var(--couleur-accent), 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  opacity: 0;
+  z-index: 5;
+}
+
+.recherche input:hover {
+  cursor: pointer;
+}
+
+.recherche input:focus {
+  width: 300px;
+  opacity: 1;
+  cursor: text;
+}
+
+.recherche input:focus ~ .rechercher {
+  right: -420px;
+  background: var(--couleur-secondaire);
+  z-index: 6;
+}
+
+.recherche input:focus ~ .rechercher::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+
+.recherche input:focus ~ .rechercher::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+
+.recherche input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
 }

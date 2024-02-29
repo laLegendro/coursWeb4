@@ -17,9 +17,8 @@
 - Création de liens réagissant aux événements ;HOVER, :visited, :focus
 - Amélioration générale de la pagination
 - Ajout de nouveaux éléments html
-- style.css
-
-À réaliser:
+- style.css=-094  
+  À réaliser:
 
 - Améliorer l'entête
 - Ajouter une image 300 x 300 px, elle doit être à droite genr. crér un doissier image, style qu'on veut développer.
