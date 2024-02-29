@@ -59,6 +59,7 @@
           while (have_posts()) : the_post();
             $titre = get_the_title();
             $sigle = substr($titre, 0, 7);
+            $duree = substr($titre, -6);
             //strpos()
             // string position
 
@@ -68,7 +69,9 @@
               <!-- si pas decho sa ne saffiche pas -->
               <h5><?php echo $sigle; ?></h5>
               <h5><?php echo $titre; ?></h5>
-              <p><?php echo wp_trim_words(get_the_content(), 10); ?></p>
+
+              <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
+              <h6><?php echo 'Durée de' . $duree; ?></h6>
             </div>
           <?php endwhile; ?>
         <?php endif; ?>

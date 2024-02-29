@@ -5,11 +5,11 @@
 }
 
 .carte {
-  background-color: var(--couleur-secondaire);
-  border: 1px solid var(--couleur-accent);
+  background-color: var(--couleur-principale);
+  border: 2px solid var(--couleur-accent);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 0 1 23%;
+  flex: 1 1 25%;
   padding: 1rem;
 }
