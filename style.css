@@ -59,18 +59,19 @@ h4 {
 }
 
 h5 {
-  font-size: clamp(0.875rem, -1.1563rem + 6.5vw, 2.5rem);
+  font-size: clamp(1.4rem, -1.1563rem + 6.5vw, 2.5rem);
   color: var(--couleur-accent);
 }
 
 h6 {
-  font-size: clamp(0.8125rem, -1.1406rem + 6.25vw, 2.375rem);
+  font-size: clamp(0.8125rem, -1.1406rem + 6vw, 1.7rem);
   color: var(--couleur-accent);
 }
 
 p {
   font-size: clamp(0.875rem, 0.0938rem + 2.5vw, 1.5rem);
   color: black;
+  padding-bottom: 1rem;
 }
 
 button.entete__button {
@@ -516,7 +517,7 @@ body {
 
 @media (max-width: 700px) {
   .sociaux a {
-    font-size: 1rem;
+    font-size: 3rem;
   }
 }
 .section__cours {
@@ -531,6 +532,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1 1 25%;
+  flex: 1 1 29%;
   padding: 1rem;
+}
+
+.carte h6 {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 760px) {
+  .carte {
+    flex: 0 0 90%;
+  }
 }/*# sourceMappingURL=style.css.map */

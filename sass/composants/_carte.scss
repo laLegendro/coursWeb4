@@ -10,6 +10,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1 1 25%;
+  flex: 1 1 29%;
   padding: 1rem;
+}
+
+.carte h6 {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 760px) {
+  .carte {
+    flex: 0 0 90%;
+  }
 }

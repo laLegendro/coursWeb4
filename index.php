@@ -57,25 +57,30 @@
         <!-- un post c un enregistrement -->
         <?php if (have_posts()) :
           while (have_posts()) : the_post();
-            $titre = get_the_title();
-            $sigle = substr($titre, 0, 7);
-            $duree = substr($titre, -6);
-            //strpos()
-            // string position
+            $titreComplet = get_the_title();
 
+            // on met le code de cours dans une variable
+            $sigles = substr($titreComplet, 0, 7);
+
+            // je trouve l'espace devant la parenthese
+            $debutDuree = strpos($titreComplet, ' (');
+
+            // j'enleve en untilisant la function trim
+            $titre = trim(substr($titreComplet, 8, $debutDuree - 8));
+
+            // extra: j'enleve les parenthèses et je les remplace
+            $duree = trim(substr($titreComplet, $debutDuree));
+            $duree = str_replace(['(', ')'], '', $duree);
 
         ?>
             <div class="carte">
-              <!-- si pas decho sa ne saffiche pas -->
-              <h5><?php echo $sigle; ?></h5>
+              <h6><?php echo $sigles; ?></h6>
               <h5><?php echo $titre; ?></h5>
-
               <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
-              <h6><?php echo 'Durée de' . $duree; ?></h6>
+              <h6><?php echo "Durée: " . $duree; ?></h6>
             </div>
           <?php endwhile; ?>
         <?php endif; ?>
-
 
       </div>
     </section>

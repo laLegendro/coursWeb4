@@ -1,35 +1,30 @@
-# Exercice1
+# Labo #3 PAR ALEJANDRO YANEZ DEL RIO
 
-## Reproduire et améliorer la maquette exemple presenté en cours
+## Création d'un site WP: LES OBJECTIFS DU LABO3 SONT LES SUIVANTS:
 
-### continuer la version du laboratoire #2
+### tous ces objectis ont été réalisés et réussis
 
-- Améliorer du Doissier Sass
-- Ajouts dans style.scss
-- Utilisations de différentes technique pour élaborer une palette de couleurs
-  - monochrome(1 seul teinte qui est le hue et on fait varier la saturation et la luminosité)
-  - complémentaire (deux teintes à 180deg)
-  - triade (3 teintes de plus ou moins 120% (jusq'à 360))
-  - se référer au site adobe couleur dans tims
-- Utilisation de la règle 60-30-10 -- 60% LE BACKGROUND, 30 % LE TEXTE ET 10% les accents (boutons, liens)
-- Améliorer l'entête en ajoutant une image en background qui s'enligne horizontalement avec les titres de l'entête
-- création d'un bouton utilisant les variables, la propriété background-image, linear-grdients... donc le bouton a deux teintes. Le bouton réagit aux événements :HOVER ET ACTIF
-- Création de liens réagissant aux événements ;HOVER, :visited, :focus
-- Amélioration générale de la pagination
-- Ajout de nouveaux éléments html
-- style.css=-094  
-  À réaliser:
+- Adaptation du thème de exercice #1
+- Création du modèle index.php
+- Création de la branche labo3
+- minimum 3 commits
+- Un Readme.md qui contiendra:
+  - Le nom de l'auteur
+  - L'objectif du labo3
+  - Les réalisations
+  - Un lien vers la github-page
+- Décomposer le titre de chaque cours:
 
-- Améliorer l'entête
-- Ajouter une image 300 x 300 px, elle doit être à droite genr. crér un doissier image, style qu'on veut développer.
-  (background image, le url, background position, pour centrer l'image verticalement on va dire 50% et à droite 100%)
-- Ajouter un bouton
-- Ajouter des liens
-- Améliorer pagination
-- Ajouter de nouveaux éléments HTML
-- Créer plusieurs commit
-- Une Git-hub-page
-- mettre l'adresse du github page:
+  - sigle du cours ex: 582-4W4
+  - le titre du cours ex: Conception d'interface et développement Web
+  - la durée du cours : 90h
+
+- Garder les 30 premiers mots de la description du cours.
+
+### La section ACCUEIL affichera la liste des cours du TIM en 3 ou 4 colonnes.
+
+- La liste devra s'adapter aux différentes largeurs de fenêtre en mobile une seule colonne.
+- Chacune des cartes de cours sera formatés en en utilisant les flex box
 
 ### MA GITHUB PAGE:
 
