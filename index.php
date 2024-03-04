@@ -26,6 +26,12 @@
 </head>
 
 <body>
+
+  <div id="menu" class="global">
+    <div class="entete__menu">
+      <?php wp_nav_menu() ?>
+    </div>
+  </div>
   <div id="entete" class="global">
     <header class="entete__header">
       <h1>Mon thème par: Alejandro</h1>

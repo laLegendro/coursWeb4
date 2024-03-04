@@ -20,7 +20,8 @@ body {
 
 .global > section,
 .global > header,
-.global > footer {
+.global > footer,
+.global > .entete__menu {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
   padding: 5rem 1rem;
   flex: 0 1 1100px;

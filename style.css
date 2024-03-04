@@ -129,7 +129,8 @@ body {
 
 .global > section,
 .global > header,
-.global > footer {
+.global > footer,
+.global > .entete__menu {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
   padding: 5rem 1rem;
   flex: 0 1 1100px;
@@ -545,4 +546,32 @@ body {
   .carte {
     flex: 0 0 90%;
   }
+}
+/*<div id="menu" class="global">
+    <div class="entete__menu">
+    //generer par wp_nav_menu() de wordpress
+      <div class="menu-entete-container">
+        <ul id="menu-entete" class="menu">
+            <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-31"><a href="http://localhost/Bd-4w4/index.php/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/" aria-current="page">Communication</a></li>
+            <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost/Bd-4w4/index.php/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
+            <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost/Bd-4w4/index.php/2020/10/07/582-1j1-animation-et-interactivite-en-jeu-75h/">Animation et interactivité</a></li>
+            <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost/Bd-4w4/index.php/2020/10/07/description-du-cours-582-1m1-creation-video/">Création vidéo</a></li>
+        </ul>
+       </div>
+    </div>
+</div>
+*/
+.entete__menu {
+  border: 1px solid red;
+}
+
+.menu-entete-container {
+  border: 1px solid green;
+  width: 100%;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */
