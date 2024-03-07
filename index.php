@@ -10,7 +10,7 @@
     <h3>TIM - Collège de maisonneuve</h3>
     <a href="#evenement"><button class="entete__button">Événements</button></a>
   </section>
-
+  <?php get_template_part("gabarit/vague1"); ?>
 </div>
 <div id="accueil" class="global">
   <section class="accueil__section">
@@ -57,6 +57,7 @@
 
     </div>
   </section>
+
 </div>
 
 <div id="galerie" class="global diagonal">
@@ -66,8 +67,9 @@
       Comment utiliser un blockquote? La question du million
     </blockquote>
   </section>
+
 </div>
-<?php get_template_part("gabarit/vague1"); ?>
+
 <div id="evenement" class="global">
   <section class="accueil__evenement">
     <h2>Événement</h2>

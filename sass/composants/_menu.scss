@@ -13,10 +13,7 @@
 </div>
 
 
-.entete__menu {
-  border: 1px solid red;
-}
-*/
+
 
 .menu-entete-container {
   // qui deviendra nav
@@ -33,46 +30,90 @@
     transform: translateX(0);
   }
 }
+*/
 
-.menu {
-  //ul
-  list-style-type: none;
+#menu.global {
+  //le conteneur du nav
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
-  align-items: flex-start;
-
-  @media screen and (min-width: 700px) {
-    // desktop
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
+  background-color: var(--couleur-secondaire);
+  position: relative;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100vw; /*si je ne mets pas de width, ça va seulement prendre la largeur du bouton*/
 }
 
-.menu-item {
-  //li
-}
-
-.menu-item a {
-  //li a
-}
-
-#chk_burger {
-  display: none;
-}
-
-#burger {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+.entete__menu span {
+  display: flex;
 
   @media screen and (min-width: 700px) {
     display: none;
   }
 }
 
-#chk_burger:checked ~ .menu-entete-container {
-  transform: translateX(100%);
+nav {
+  /*lorsque le burger est checked, le nav apparaît de la gauche*/
+
+  background-color: var(--couleur-accent);
+  box-shadow: 10px 10px 20px 15px rgba(0, 0, 0, 0.2);
+  position: absolute; /*par rapport au burger*/
+  top: 55px;
+  display: flex; /*centrer étape 1*/
+  flex-direction: column; /*centrer étape 2, en colonne*/
+  justify-content: center; /*centrer étape 1*/
+  align-items: center; /*centrer étape 1*/
+  transform: translateX(120%); /*pour qu'il soit dehors du viewport*/
+  transition: transform 1s ease;
+  width: 100%;
+  padding: 1rem 0 1rem 0; /*je ne veux pas qu'il soit un peu décollé du menu burger*/
+  z-index: 2; /*sinon il apparaît en arrière*/
+
+  @media screen and (min-width: 700px) {
+    background-color: var(--couleur-secondaire);
+    position: static;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateX(0);
+    box-shadow: unset;
+  }
+}
+
+nav ul {
+  //ul
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media screen and (min-width: 1000px) {
+    // desktop
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.menu-item {
+  //li
+  margin: 0.2rem;
+}
+
+.menu-item a {
+  //li a
+  color: white;
+
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#chk_burger {
+  display: none;
+}
+
+#chk_burger:checked ~ nav {
+  transform: translateX(0);
+  transition: transform 1s ease;
 }

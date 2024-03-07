@@ -562,56 +562,102 @@ body {
 </div>
 
 
-.entete__menu {
-  border: 1px solid red;
-}
-*/
+
+
 .menu-entete-container {
+  // qui deviendra nav
+
   width: 100%;
   position: absolute;
   top: 0;
   left: 50px;
   z-index: 2;
   transform: translateX(-200%);
-}
-@media screen and (min-width: 700px) {
-  .menu-entete-container {
+
+  @media screen and (min-width: 700px) {
     position: static;
     transform: translateX(0);
   }
 }
+*/
+#menu.global {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--couleur-secondaire);
+  position: relative;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  width: 100vw; /*si je ne mets pas de width, ça va seulement prendre la largeur du bouton*/
+}
 
-.menu {
+.entete__menu span {
+  display: flex;
+}
+@media screen and (min-width: 700px) {
+  .entete__menu span {
+    display: none;
+  }
+}
+
+nav {
+  /*lorsque le burger est checked, le nav apparaît de la gauche*/
+  background-color: var(--couleur-accent);
+  box-shadow: 10px 10px 20px 15px rgba(0, 0, 0, 0.2);
+  position: absolute; /*par rapport au burger*/
+  top: 55px;
+  display: flex; /*centrer étape 1*/
+  flex-direction: column; /*centrer étape 2, en colonne*/
+  justify-content: center; /*centrer étape 1*/
+  align-items: center; /*centrer étape 1*/
+  transform: translateX(120%); /*pour qu'il soit dehors du viewport*/
+  transition: transform 1s ease;
+  width: 100%;
+  padding: 1rem 0 1rem 0; /*je ne veux pas qu'il soit un peu décollé du menu burger*/
+  z-index: 2; /*sinon il apparaît en arrière*/
+}
+@media screen and (min-width: 700px) {
+  nav {
+    background-color: var(--couleur-secondaire);
+    position: static;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateX(0);
+    box-shadow: unset;
+  }
+}
+
+nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 }
-@media screen and (min-width: 700px) {
-  .menu {
+@media screen and (min-width: 1000px) {
+  nav ul {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 100%;
   }
+}
+
+.menu-item {
+  margin: 0.2rem;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 #chk_burger {
   display: none;
 }
 
-#burger {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-@media screen and (min-width: 700px) {
-  #burger {
-    display: none;
-  }
-}
-
-#chk_burger:checked ~ .menu-entete-container {
-  transform: translateX(100%);
+#chk_burger:checked ~ nav {
+  transform: translateX(0);
+  transition: transform 1s ease;
 }/*# sourceMappingURL=style.css.map */
