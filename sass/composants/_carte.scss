@@ -11,6 +11,8 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1 1 29%;
+  //flex 1 1 calc(1000px/4);
+  // et noramalement je peux enlever le media en bas
   padding: 1rem;
 }
 
@@ -18,6 +20,8 @@
   margin: 0;
   padding: 0;
 }
+
+//. carte *{ text-align: center et sa va tout centrer}
 
 @media (max-width: 760px) {
   .carte {

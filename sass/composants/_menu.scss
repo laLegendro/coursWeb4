@@ -11,25 +11,68 @@
        </div>
     </div>
 </div>
-*/
+
 
 .entete__menu {
   border: 1px solid red;
 }
+*/
 
 .menu-entete-container {
-  //div
-  border: 1px solid green;
+  // qui deviendra nav
+
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 2;
+  transform: translateX(-200%);
+
+  @media screen and (min-width: 700px) {
+    position: static;
+    transform: translateX(0);
+  }
 }
 
 .menu {
   //ul
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media screen and (min-width: 700px) {
+    // desktop
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
 .menu-item {
   //li
+}
+
+.menu-item a {
+  //li a
+}
+
+#chk_burger {
+  display: none;
+}
+
+#burger {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu-entete-container {
+  transform: translateX(100%);
 }

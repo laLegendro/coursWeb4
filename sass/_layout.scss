@@ -15,20 +15,23 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
+  //min-height: 40vh;
 }
 
 .global > section,
-.global > header,
-.global > footer,
-.global > .entete__menu {
+.global > footer {
   flex: 0 1 var(--largeur-flex-basis); /* le prmier argument c grow, deuxieme c shrink et le 3eme c */
   padding: 5rem 1rem;
   flex: 0 1 1100px;
 }
 
-.global > header {
-  flex: 0 1 1300px;
+.global > header,
+.entete__menu,
+.entete__header {
+  flex: 0 1 1500px;
+
+  //min-height: 50vh;
+  position: relative;
 }
 
 #entete {

@@ -1,30 +1,40 @@
-# Labo #3 PAR ALEJANDRO YANEZ DEL RIO
+# Labo 4
 
-## Création d'un site WP: LES OBJECTIFS DU LABO3 SONT LES SUIVANTS:
+# PAR ALEJANDRO YANEZ DEL RIO
 
-### tous ces objectis ont été réalisés et réussis
+### Créer une nouvelle branche « labo4 »
 
-- Adaptation du thème de exercice #1
-- Création du modèle index.php
-- Création de la branche labo3
-- minimum 3 commits
-- Un Readme.md qui contiendra:
-  - Le nom de l'auteur
-  - L'objectif du labo3
-  - Les réalisations
-  - Un lien vers la github-page
-- Décomposer le titre de chaque cours:
+### Création du menu principal
 
-  - sigle du cours ex: 582-4W4
-  - le titre du cours ex: Conception d'interface et développement Web
-  - la durée du cours : 90h
+- Ajouter un menu permettant d'accéder
+  - à vos quatre cours préférés
+  - à chacune des sections de la page
+- Le menu doit être formatté en utilisant
+  composant/\_menu.scss
+  Le menu doit être adaptatif et être amovible en version mobile.
 
-- Garder les 30 premiers mots de la description du cours.
+### Création d'un header.php
 
-### La section ACCUEIL affichera la liste des cours du TIM en 3 ou 4 colonnes.
+- Créer le template header.php qui contiendra la structure d'entête de la page qui sera reproduite dans chacun des modules du thème
 
-- La liste devra s'adapter aux différentes largeurs de fenêtre en mobile une seule colonne.
-- Chacune des cartes de cours sera formatés en en utilisant les flex box
+### Création d'un « template-part » (gabarit)
+
+- Créer un template-part qui permettra d'afficher les vagues.
+
+## Barème de correction
+
+### integration et codification (1 point)
+
+- intégration de chacun des éléments précédents de façon structuré. (1 point)
+
+### Design général de la page et organisation (1 point)
+
+- Création d'une github-page à partir de index.htm
+- Création du readme.md avec:
+- Le nom de l'auteur
+- Un résumé des étapes du labo-4
+- Un lien vers votre 'github-page
+- Production de 5 commits
 
 ### MA GITHUB PAGE:
 
